@@ -113,11 +113,11 @@ locals {
       description           = (v.description != null ? v.description : "")
       organization          = (v.organization != null ? v.organization : "default")
       tags                  = (v.tags != null ? v.tags : [])
-      vsphere_cluster       = coalesce(v.vsphere_cluster, "default")
-      vsphere_datastore     = coalesce(v.vsphere_datastore, "datastore1")
-      vsphere_portgroup     = coalesce(v.vsphere_portgroup, ["VM Network"])
-      vsphere_resource_pool = (v.vsphere_resource_pool != null ? v.vsphere_resource_pool : "")
-      vsphere_target        = coalesce(v.vsphere_target, "")
+      vsphere_cluster       = coalesce(v.vsphere_cluster, "HX")
+      vsphere_datastore     = coalesce(v.vsphere_datastore, "Terraform")
+      vsphere_portgroup     = coalesce(v.vsphere_portgroup, ["Terraform-50"])
+      vsphere_resource_pool = (v.vsphere_resource_pool != null ? v.vsphere_resource_pool : "HX")
+      vsphere_target        = coalesce(v.vsphere_target, "11.11.11.80")
     }
   }
   k8s_vm_instance_type = {
