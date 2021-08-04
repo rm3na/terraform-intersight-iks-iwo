@@ -353,13 +353,13 @@ variable "k8s_vm_infra_config" {
   default = {
     default = { # The VM Infra Config Policy Name will be {each.key}.  In this case it would be default if left like this.
       description           = ""
-      organization          = "default"
+      organization          = "HX"
       tags                  = []
-      vsphere_cluster       = "default"
-      vsphere_datastore     = "datastore1"
-      vsphere_portgroup     = ["VM Network"]
-      vsphere_resource_pool = ""
-      vsphere_target        = ""
+      vsphere_cluster       = "HX"
+      vsphere_datastore     = "Terraform"
+      vsphere_portgroup     = ["Terraform-50"]
+      vsphere_resource_pool = "HX"
+      vsphere_target        = "11.11.11.80"
     }
   }
   description = <<-EOT
